@@ -1,52 +1,59 @@
-body {
-    background-color: rgb(127, 127, 127);
-    margin: 0;
-    border: 0;
+:root {
+    --bg-color: rgb(127, 127, 127);
+    --fg-color: white;
+    --transparent: rgba(0, 0, 0, 0%);
+    --semi-transparent:rgba(0, 0, 0, 50%);
+    --nav-bar-bg:rgb(30, 21, 21);
+    --nav-bar-fg:rgb(240, 240, 185);
+    --nav-bar-hover-fg:rgb(102, 78, 49);
+    --coffee-beans-image: url("coffeebeans6.png");
+    --default-font: serif;
 }
 
-.navigation-bar {
+body {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+    font-family: var(--default-font);
+}
+
+.nav-bar {
     display: flex;
     flex-direction: row;
-    background-color: rgb(30, 21, 21);
+    background-color: var(--nav-bar-bg);
     padding: 5px;
 } 
 
-.home-page-icon, .page-icons {
-    font-family: serif;
-    display: flex;
-    flex-direction: row;
-}
-
-.page-icons {
+.mobile-app-bar {
     margin-left: 5%;
 }
 
 .registration-bar {
-    display: flex;
-    flex-direction: row;
     margin-left: auto;
 }
 
-.generic-button {
+.nav-button {
     width: 150px;
     padding: 10px;
     font-size: 20px;
-    font-family: serif;
     font-weight: 300;
     margin-left: 10px;
     margin-right: 10px;
     border: 0px;
-    color: rgb(240, 240, 185);
-    background-color: rgba(0, 0, 0, 0%);
+    color: var(--nav-bar-fg);
+    background-color: var(--transparent);
 }
 
-.generic-button:hover {
-    color:rgb(102, 78, 49);
+.nav-button:hover {
+    color:var(--nav-bar-hover-fg);
 }
-.hero-section {
-    background-image: url("coffeebeans6.png");
+
+.hero {
+    background-image: var(--coffee-beans-image);
+    background-color: var(--semi-transparent);
     background-blend-mode: multiply;
-    background-color: rgba(0, 0, 0, 50%);
 }
 
 .description-header {
@@ -71,7 +78,7 @@ body {
     margin: 0;
 }
 
-.hero-section-buttons {
+.hero-buttons {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,7 +86,7 @@ body {
     padding: 0;
 }
 
-.hero-section-button {
+.hero-button {
     flex: 1;
     margin-right: 125px;
     margin-left: 125px;
@@ -99,6 +106,7 @@ body {
     color: rgb(240, 240, 185);
 }
 
+/*
 .quality-section {
     display: grid;
     border: 10px rgb(69, 53, 33) double;
@@ -148,3 +156,4 @@ body {
     grid-column: 2;
     grid-row: 1;
 }
+*/
