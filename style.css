@@ -1,8 +1,11 @@
 :root {
-    --bg-color: rgb(127, 127, 127);
+    --bg-color: rgb(116, 104, 89);
     --fg-color: white;
+    --fg-color-alt: wheat;
     --transparent: rgba(0, 0, 0, 0%);
     --semi-transparent:rgba(0, 0, 0, 50%);
+    --glass-brown:rgba(69, 53, 33, 0.5);
+    --darker-glass-brown:rgba(69, 53, 33, 0.75);
     --nav-bar-bg:rgb(30, 21, 21);
     --nav-bar-fg:rgb(240, 240, 185);
     --nav-bar-hover-fg:rgb(102, 78, 49);
@@ -35,10 +38,11 @@ body {
 }
 
 .nav-button {
-    width: 150px;
-    padding: 10px;
+    font-family: var(--default-font);
     font-size: 20px;
     font-weight: 300;
+    width: 150px;
+    padding: 10px;
     margin-left: 10px;
     margin-right: 10px;
     border: 0px;
@@ -50,17 +54,16 @@ body {
     color:var(--nav-bar-hover-fg);
 }
 
-.hero {
+.section {
     background-image: var(--coffee-beans-image);
-    background-color: var(--semi-transparent);
+    background-color: var(--darker-glass-brown);
     background-blend-mode: multiply;
 }
 
-.description-header {
+.section-header {
     text-align: center;            
     font-size: 7.5cqh;
     font-weight: 600;
-    color:white;
     padding-top: 5%;
     padding-bottom: 5%;
     padding-left: 2%;
@@ -68,14 +71,44 @@ body {
     margin: 0;
 }
 
-.description-text {
+.section-text {
     text-align: center;            
     font-size: 2.5cqh;
-    color:white;
     padding-bottom: 5%;
     padding-left: 2%;
     padding-right: 2%;
     margin: 0;
+}
+
+#quality-section  {
+    background-image: url("3717295073_f5ae257d71_o.jpg");
+    background-size: cover;
+}
+
+#reputation-section  {
+    background-image: url("hero-image.fill.size_1248x702.v1699835052.jpg");
+    background-size: cover;
+}
+
+#delivery-section  {
+    background-image: url("sacks-of-premium-roasted-coffee-2.jpg");
+    background-size: cover;
+}
+
+#quality-section  .section-text, 
+#reputation-section  .section-text,
+#delivery-section  .section-text 
+{
+    padding-top: 2%;
+    padding-bottom: 10%;
+}
+
+#quality-section .section-header, 
+#reputation-section .section-header,
+#delivery-section .section-header 
+{
+    font-size: 5cqh;
+    color: var(--fg-color-alt);
 }
 
 .hero-buttons {
@@ -92,8 +125,8 @@ body {
     margin-left: 125px;
     margin-bottom: 75px;
     padding: 50px;
-    background-color: rgba(69, 53, 33, 0.5);
-    color: white;
+    background-color: var(--glass-brown);
+    color: var(--fg-color);
     border: 2px solid black;
     border-radius: 5px;
     font-size: 35px;
@@ -102,35 +135,12 @@ body {
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 20%);
 }
 
-.hero-section-button:hover {
-    color: rgb(240, 240, 185);
-}
+.hero-button:hover {
+    color: var(--fg-color-alt);
+    background-color: var(--darker-glass-brown);
+}  
 
 /*
-.quality-section {
-    display: grid;
-    border: 10px rgb(69, 53, 33) double;
-    margin: 100px;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 20%);
-}
-
-.quality-text {
-    text-align: center;            
-    font-size: 2.5cqh;
-    color:white;
-    padding-bottom: 5%;
-    padding-left: 2%;
-    padding-right: 2%;
-    padding-top: auto;
-    margin: 0;
-    grid-column: 2;
-    grid-row: 1;
-}
-
-.coffee-image {
-    grid-column: 1;
-    grid-row: 1;
-}
 
 .reputation-section {
     display: grid;
