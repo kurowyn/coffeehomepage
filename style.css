@@ -1,5 +1,6 @@
 :root {
     --bg-color: rgb(116, 104, 89);
+    --copyright-bg-color: rgb(21, 14, 0);
     --fg-color: white;
     --fg-color-alt: wheat;
     --transparent: rgba(0, 0, 0, 0%);
@@ -9,8 +10,37 @@
     --nav-bar-bg:rgb(30, 21, 21);
     --nav-bar-fg:rgb(240, 240, 185);
     --nav-bar-hover-fg:rgb(102, 78, 49);
-    --coffee-beans-image: url("coffeebeans6.png");
+    --hero-image: url("images/hero-image.png");
+    --quality-section-image: url("images/quality-section.png");
+    --reputation-section-image: url("images/reputation-section.png");
+    --delivery-section-image: url("images/delivery-section.png");
+    --career-section-image: url("images/career-section.png");
+    --last-section-image: url("images/last-section.png");
     --default-font: serif;
+}
+
+#hero {
+    background-image: var(--hero-image);
+}
+
+#quality-section {
+    background-image: var(--quality-section-image);
+}
+
+#reputation-section {
+    background-image: var(--reputation-section-image);
+}
+
+#delivery-section {
+    background-image: var(--delivery-section-image);
+}
+
+#career-section {
+    background-image: var(--career-section-image);
+}
+
+#last-section {
+    background-image: var(--last-section-image);
 }
 
 body {
@@ -27,15 +57,17 @@ body {
     flex-direction: row;
     background-color: var(--nav-bar-bg);
     padding: 5px;
+    position: sticky;
+    top: 0px;
 } 
 
 .nav-button {
     font-family: var(--default-font);
-    font-size: 20px;
-    width: 150px;
-    padding: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    font-size: 1cqw;
+    width: 6cqw;
+    padding: 0.5cqw;
+    margin-left: 0.8cqw;
+    margin-right: 0.8cqw;
     border: 0px;
     color: var(--nav-bar-fg);
     background-color: var(--transparent);
@@ -64,12 +96,12 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 75vh;
+    min-height: 75vh;
 }
 
 .caption-title {
     color: var(--fg-color-alt);
-    font-size: 50pt;
+    font-size: 55px;
     padding: 0;
     border: 0;
     margin: 0;
@@ -82,37 +114,13 @@ body {
 .caption-text {
     text-align: center;
     color: var(--fg-color);
-    font-size: 25pt;
+    font-size: 32px;
     margin-top: 2vh;
     margin-bottom: 2vh;
     margin-right: 0;
     margin-left: 0;
     padding-right: 2vw;
     padding-left: 2vw;
-}
-
-#hero {
-    background-image: url("coffeebeans6.png");
-}
-
-#quality-section {
-    background-image: url("3717295073_f5ae257d71_o.jpg");
-}
-
-#reputation-section {
-    background-image: url("hero-image.fill.size_1248x702.v1699835052.jpg");
-}
-
-#delivery-section {
-    background-image: url("sacks-of-premium-roasted-coffee-2.jpg");
-}
-
-#career-section {
-    background-image: url("AdobeStock_142267143-s-1920x1280.jpeg");
-}
-
-#last-section {
-    background-image: url("coffee.png");
 }
 
 .hero-buttons {
@@ -132,11 +140,12 @@ body {
     margin-bottom: 5vh;
     margin-right: 5vw;
     margin-left: 5vw;
+    padding: 0;
     background-color: var(--glass-brown);
     color: var(--fg-color);
     border: 2px solid black;
-    border-radius: 5px;
-    font-size: 35px;
+    border-radius: 5pt;
+    font-size: 1.5cqw;
     font-family: serif;
     font-weight: 550;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 20%);
@@ -150,41 +159,34 @@ body {
 .copyright-section {
     margin: 0;
     padding: 0;
-    background-color: rgb(21, 14, 0);
+    background-color:var(--copyright-bg-color);
 }
 
 .copyright-notice {
     margin: 0px;
-    padding: 5px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: rgb(21, 14, 0);
+    padding: 1cqh;
+    padding-top: 0.5cqh;
+    padding-bottom: 0.5cqh;
     text-align: center;
     margin-right: auto;
+    font-size: 1.5cqh;
 }
 
 .copyright-links {
     text-align: center;
     margin: 0px;
-    padding: 5px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 1cqh;
+    padding-top: 1cqh;
+    padding-bottom: 1cqh;
 }
 
 .copyright-link {
     margin: 0px;
-    padding: 5px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 1cqh;
+    padding-top: 1cqh;
+    padding-bottom: 1cqh;
     color: wheat;
-}
-
-.copyright-link {
-    margin: 0px;
-    padding: 5px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: wheat;
+    font-size: 1.5cqh;
 }
 
 .copyright-link:hover {
