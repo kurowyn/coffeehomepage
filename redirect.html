@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+    </head>
+
+    <body style="background-color: black; color: white;">
+        <h1> This page does not exist. </h1>
+        <p> The website from which you were redirected is not even a real company's website, anyway. </p>
+        <p> <em>Obscure Purveyor</em> isn't a real company. <em>Kohi&trade;</em> isn't a real trademark. </p>
+        <p> Do whatever you want with that information. </p>
+        <hr>
+        <p>Still here? Well, if you want to <em><a id="first_rng_hyperlink" href="index.html">go back</a></em> so badly...</p>
+        <p>You better hope you're <strong><a id="second_rng_hyperlink" href="index.html">as lucky</a></strong>, though.</p>
+
+        <p style="position: fixed; bottom: 0; color: rgba(128, 128, 128, 0.284);">
+             If you're in <a style="text-decoration: none;" href="index.html"><em>that</em></a> much of a hurry... 
+        </p>
+
+        <script>
+            function rng() {
+                if (Math.floor(Math.random() * 2) == 1) {
+                    window.location.href = "index.html"
+                } else {
+                    document.body.appendChild(
+                        document.createElement("p")
+                                .appendChild(
+                                    document.createTextNode("Hmph. You better try again.")
+                                )
+                    );
+                    window.location.reload();
+                }
+            }
+
+            first_rng_hyperlink.addEventListener('click', (e) => {
+                e.preventDefault();
+                rng();
+            });
+
+            second_rng_hyperlink.addEventListener('click', (e) => {
+                e.preventDefault();
+                rng();
+            });
+        </script>
+    </body>
+</html>
