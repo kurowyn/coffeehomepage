@@ -1,0 +1,1 @@
+Just a small university assignment, and also a way for me to learn basic HTML and CSS.
