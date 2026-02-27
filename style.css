@@ -73,11 +73,11 @@ body {
     background-color: var(--transparent);
 }
 
-.mobile-app-bar {
+.mobile-app-button {
     margin-left: 5%;
 }
 
-.registration-bar {
+.registration-button {
     margin-left: auto;
 }
 
